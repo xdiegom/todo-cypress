@@ -4,6 +4,7 @@ import store from "./store";
 import "./registerServiceWorker";
 
 import "./assets/styles/app.css";
+import "./assets/icons/themify-icons.css";
 
 Vue.config.productionTip = false;
 

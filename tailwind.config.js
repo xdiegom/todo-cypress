@@ -129,6 +129,7 @@ module.exports = {
     spacing: {
       px: "1px",
       "0": "0",
+      uncheck: "0.48‬rem",
       "1": "0.25rem",
       "2": "0.5rem",
       "3": "0.75rem",
@@ -145,7 +146,8 @@ module.exports = {
       "40": "10rem",
       "48": "12rem",
       "56": "14rem",
-      "64": "16rem"
+      "64": "16rem",
+      "80": "25rem"
     },
     backgroundColor: theme => theme("colors"),
     backgroundPosition: {
@@ -174,6 +176,7 @@ module.exports = {
       default: "0.25rem",
       md: "0.375rem",
       lg: "0.5rem",
+      xl: "3rem",
       full: "9999px"
     },
     borderWidth: {
@@ -618,7 +621,7 @@ module.exports = {
     alignSelf: ["responsive"],
     appearance: ["responsive"],
     backgroundAttachment: ["responsive"],
-    backgroundColor: ["responsive", "hover", "focus"],
+    backgroundColor: ["responsive", "hover", "focus", "active"],
     backgroundPosition: ["responsive"],
     backgroundRepeat: ["responsive"],
     backgroundSize: ["responsive"],
