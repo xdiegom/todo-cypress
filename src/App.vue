@@ -15,7 +15,7 @@
               ref="addTodo"
               autofocus
               v-model="description"
-              class="w-full py-4 border rounded px-2 border-blue-700 focus:outline-none"
+              class="w-full py-4 border rounded px-2 border-blue-700 focus:outline-none focus:border-blue-500"
               type="text"
             />
             <div class="flex justify-center w-full">
