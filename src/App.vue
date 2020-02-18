@@ -11,8 +11,8 @@
           <!-- Add ToDo -->
           <form class="mx-8 mt-8" @submit.prevent.enter="add">
             <input
-              id="addTodo"
-              ref="addTodo"
+              id="addTodoInput"
+              ref="addTodoInput"
               autofocus
               v-model="description"
               class="w-full py-4 border rounded px-2 border-blue-700 focus:outline-none focus:border-blue-500"
@@ -20,7 +20,7 @@
             />
             <div class="flex justify-center w-full">
               <button
-                id="addTodo"
+                id="addTodoBtn"
                 class="shadow-lg bg-purple-700 text-white rounded-full py-3 px-8 mt-3 font-medium tracking-wide focus:outline-none focus:shadow-outline hover:bg-purple-600 active:bg-purple-500"
                 type="submit"
               >
@@ -56,20 +56,19 @@
                 :key="index"
                 class="flex items-center justify-between w-full mb-8"
               >
-                <div class="flex">
+                <div
+                  class="flex w-full cursor-pointer"
+                  @click="todo.done = !todo.done"
+                >
                   <input
                     class="hidden checkbox"
                     type="checkbox"
                     :checked="todo.done"
                   />
-                  <span
-                    @click="todo.done = !todo.done"
-                    class="checkbox-label text-justify font-medium"
-                  />
+                  <span class="checkbox-label text-justify font-medium" />
 
                   <div
-                    @click="todo.done = !todo.done"
-                    class="cursor-pointer text-lg font-medium max-w-md"
+                    class="text-lg font-medium"
                     :class="{ 'line-through': todo.done }"
                   >
                     {{ todo.description }}
@@ -108,7 +107,7 @@ export default {
         done: false
       });
       this.description = "";
-      this.$refs.addTodo.focus();
+      this.$refs.addTodoInput.focus();
     },
     remove(index) {
       // eslint-disable-next-line no-unused-vars
